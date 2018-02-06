@@ -1,0 +1,4 @@
+di_platform:
+    resource: "@DIPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
+

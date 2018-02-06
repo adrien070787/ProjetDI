@@ -1,0 +1,16 @@
+{% extends "DIPlatformBundle::layout.html.twig" %}
+
+{% block diplatform_body %}
+    <h3>Créer une annonce</h3>
+    {{ include("DIPlatformBundle:Advert:form.html.twig") }}
+    <div>
+        <a href="{{ path('di_platform_home') }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Annuler et revenir à l'accueil
+        </a>
+        <a href="" class="btn btn-success">
+            <i class="glyphicon glyphicon-ok"></i>
+            Sauvegarder l'annonce
+        </a>
+    </div>
+{% endblock %}

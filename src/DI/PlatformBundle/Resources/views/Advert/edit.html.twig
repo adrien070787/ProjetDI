@@ -1,0 +1,23 @@
+{% extends "DIPlatformBundle::layout.html.twig" %}
+
+    {% block diplatform_body %}
+        <h3>Modifier une annonce</h3>
+        <p>Je vais modifier l'annonce ayant l'id {{ id }}</p>
+        {{ include("DIPlatformBundle:Advert:form.html.twig") }}
+        <div>
+            <a href="{{ path('di_platform_home') }}" class="btn btn-default">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Retour à la liste
+            </a>
+            <a href="{{ path('di_platform_view', {'id':id}) }}" class="btn btn-default">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Retour à l'annonce
+            </a>
+            <a href="" class="btn btn-danger">
+                <i class="glyphicon glyphicon-trash"></i>
+                Supprimer l'annonce
+            </a>
+        </div>
+    {% endblock %}
+
+

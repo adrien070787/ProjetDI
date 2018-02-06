@@ -1,0 +1,23 @@
+{% extends "DIPlatformBundle::layout.html.twig" %}
+
+{% block title %}Accueil - {{ parent() }} {% endblock %}
+
+{% block diplatform_body %}
+    <h3>Liste des annonces</h3>
+
+    <ul>
+        {% for annonce in listeAnnonces %}
+            <li>
+                <a href="{{ path('di_platform_view', {'id':annonce.id}) }}">
+                    {{ annonce.title }}
+                </a>
+                par {{ annonce.author }}
+                le {{ annonce.date|date('d/m/Y') }}
+
+            </li>
+        {% else %}
+            <li> pas de d'annonce trouvee.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

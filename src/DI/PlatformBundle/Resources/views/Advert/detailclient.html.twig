@@ -1,0 +1,21 @@
+'id de mon client est : {{ mon_id_client }}
+<br />
+mon client est : {{ bonoupas }}
+<br />
+url relative construite via controller avec le service router: {{ mon_url1 }}
+<br />
+url relative construite via controller avec generateUrl: {{ mon_url2 }}
+<br/>
+url absolue construite via controller avec service router:: {{ mon_url3 }}
+<br/>
+url relative générée par twig : {{ path('di_platform_detail_client', { 'id_client': mon_id_client }) }}
+<br/>
+url absolue générée par twig : {{ url('di_platform_detail_client', { 'id_client': mon_id_client }) }}
+
+<br />
+<br />
+<br />
+Test concatenation : {{ mon_id_client~' '~bonoupas }}
+
+<hr/>
+
