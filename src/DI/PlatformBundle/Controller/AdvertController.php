@@ -71,8 +71,16 @@ class AdvertController extends Controller
     }
 
     public function addAction() {
-        $content = $this->get('templating')->render('DIPlatformBundle:Advert:add.html.twig');
-        return new Response($content);
+
+        $antispam = $this->container->get('di_platform.antispam');
+
+        $text = 'totototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototototo';
+        //if ($antispam->isSpam($text)) {
+        //    throw new \Exception('Votre message a été détecté comme spam');
+        //} else {
+            $content = $this->get('templating')->render('DIPlatformBundle:Advert:add.html.twig', array('text' => $text));
+            return new Response($content);
+        //}
     }
 
 

@@ -2,6 +2,12 @@
 
 {% block diplatform_body %}
     <h3>Créer une annonce</h3>
+
+
+    {{ checkIfSpam(text) }}
+
+
+
     {{ include("DIPlatformBundle:Advert:form.html.twig") }}
     <div>
         <a href="{{ path('di_platform_home') }}" class="btn btn-default">

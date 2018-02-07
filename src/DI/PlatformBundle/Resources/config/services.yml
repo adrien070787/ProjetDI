@@ -2,3 +2,13 @@ services:
 #    di_platform.example:
 #        class: DI\PlatformBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    di_platform.antispam:
+        class: DI\PlatformBundle\Antispam\DIAntispam
+        arguments: ["@mailer", %locale%, 50]
+
+    di_platform.twig.antispam_extension:
+        class: DI\PlatformBundle\Twig\AntispamExtension
+        arguments : ["@di_platform.antispam"]
+        tags :
+            - { name: twig.extension}
